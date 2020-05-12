@@ -99,8 +99,7 @@ def _output_size(dim, input, size, scale_factor):
     ]
 
 
-def interpolate(input, size=None, scale_factor=None, mode="nearest", align_corners=None):
-    # type: (Tensor, Optional[List[int]], Optional[float], str, Optional[bool]) -> Tensor
+def interpolate(input: Tensor, size: Optional[List[int]] = None, scale_factor: Optional[float] =None, mode: str = "nearest", align_corners: Optional[bool] = None) -> torch.Tensor:
     """
     Equivalent to nn.functional.interpolate, but with support for empty batch sizes.
     This will eventually be supported natively by PyTorch, and this
